@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container" >
+
+ 
+  <radio-group bindchange="radioChange">
+        <label wx:for="{{items}}" wx:key="{{item.value}}">
+          <view >
+            <radio value="{{item.value}}"checked="{{item.checked}}"/>
+          </view>
+          <view>{{item.name}}</view>
+        </label>
+      </radio-group>
+  <view wx:for="{{list}}">
+  <text>姓名：{{item.name}}</text><text>性别：{{item.gender}}</text>
+  </view>
+</view>
